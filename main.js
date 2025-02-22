@@ -1,35 +1,10 @@
-/* ----- NAVIGATION BAR FUNCTION ----- */
+// script.js
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-
-/* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
-    
-
-
-/* ----- TYPING EFFECT ----- */
-   
-
-/* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
-   
-
-  /* -- HOME -- */
-  
-
-  /* -- PROJECT BOX -- */
-  
-
-  /* -- HEADINGS -- */
-  
-
-/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
-
-  /* -- ABOUT INFO & CONTACT INFO -- */
-  
-
-  /* -- ABOUT SKILLS & FORM BOX -- */
-  
-
-
-/* ----- CHANGE ACTIVE LINK ----- */
-  
-  
-   
+    // Simulate sending an email (replace with actual backend logic)
+    setTimeout(function() {
+        document.getElementById('message-sent').style.display = 'block';
+        document.getElementById('contactForm').reset();
+    }, 1000);
+});
