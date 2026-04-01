@@ -1,0 +1,70 @@
+:root{
+  --bg:#0f172a;
+  --text:white;
+}
+
+.light{
+  --bg:white;
+  --text:black;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:sans-serif;
+}
+
+/* Navbar */
+.header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+}
+
+/* Hero */
+.hero{
+  text-align:center;
+  padding:100px;
+}
+
+.btn{
+  background:#38bdf8;
+  padding:10px 20px;
+  display:inline-block;
+  margin-top:20px;
+}
+
+/* Projects */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:40px;
+}
+
+.card{
+  position:relative;
+  overflow:hidden;
+}
+
+.card img{
+  width:100%;
+}
+
+.overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  transition:0.3s;
+}
+
+.card:hover .overlay{
+  opacity:1;
+}
