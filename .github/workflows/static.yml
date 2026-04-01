@@ -1,43 +1,84 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divya Ultra Portfolio</title>
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  <!-- Typed JS -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+<header class="header">
+  <h2>Divya</h2>
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+  <nav>
+    <a href="#">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button id="toggle">🌙</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>I’m Divya</h1>
+  <h2><span id="typing"></span></h2>
+
+  <a href="#" class="btn">Download CV</a>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <h2 data-aos="fade-up">My Projects</h2>
+
+  <div class="grid">
+
+    <div class="card" data-aos="fade-up">
+      <img src="https://via.placeholder.com/300">
+      <div class="overlay">
+        <h3>Portfolio</h3>
+      </div>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <img src="https://via.placeholder.com/300">
+      <div class="overlay">
+        <h3>Landing Page</h3>
+      </div>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <img src="https://via.placeholder.com/300">
+      <div class="overlay">
+        <h3>Clone Website</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: businessinquiry2000@gmail.com</p>
+</section>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
